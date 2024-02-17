@@ -7,7 +7,7 @@ const Tasks = ({projectDetails}) => {
         const newTask = document.getElementById("task");
         setTasks((prevTasks) => [
             ...prevTasks,
-            { taskTitle: newTask }
+            newTask.value
         ]);
     }
 
@@ -40,7 +40,9 @@ const Tasks = ({projectDetails}) => {
             </button>
             <ul>
                 {tasks.map((task, index) => (
-                    <li key={index}>{task}</li>
+                    <li key={index}>{task}
+                        <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 m-8 px-4 rounded focus:outline-none focus:shadow-outline-gray">Clear</button>
+                    </li>
                 ))}
             </ul>
         </div>
