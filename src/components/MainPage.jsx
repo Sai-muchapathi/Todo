@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 export default function MainPage({projectFormSubmit}) {
 
     function handleSubmit(event) {
@@ -15,16 +17,17 @@ export default function MainPage({projectFormSubmit}) {
 
     return (
         <>
-
             <form className="max-w-md mx-auto p-8 bg-white shadow-lg rounded-md" onSubmit={handleSubmit}>
+                <h1 className="text-center font-bold">Enter your project details below</h1>
+                <br/>
                 <div className="flex justify-between mb-4">
                     <button
-                        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-gray">
+                        className="bg-red-500 hover:bg-red-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-gray">
                         Cancel
                     </button>
                     <button
                         type="submit"
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+                        className="bg-green-600 hover:bg-green-400 text-white font-bold py-2 px-4 rounded
                         focus:outline-none focus:shadow-outline-blue"
                     >
                         Save

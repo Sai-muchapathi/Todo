@@ -8,11 +8,11 @@ export default function Sidebar({sideBar, projectDetails, showTasks}) {
             </button>
             <ol>
                 {projectDetails.map((project, index) => (
-                    <li key={index}>
+                    <li key={project.id}>
                         {project.projectTitle && (
                             <button
-                                onClick={() => showTasks(index)}
-                                className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-14 m-2 rounded"
+                                onClick={() => showTasks(project.id)}
+                                className="w-full bg-auto hover:bg-white text-emerald-600 font-bold py-2 px-14 m-2 rounded"
                             >
                                 {project.projectTitle}
                             </button>
